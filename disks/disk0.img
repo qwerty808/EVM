@@ -1,0 +1,20 @@
+EVM_DISK_IMAGE_V1
+label=system
+disk_id=0
+sector_size=512
+sector_count=4096
+
+[boot_sector]
+boot_signature=EVM0
+kernel_lba=1
+kernel_sectors=16
+kernel_entry=0x10000000
+
+[layout]
+sector_0000=boot metadata (this text header)
+sector_0001_0016=kernel image placeholder
+sector_0017_4095=free
+
+[notes]
+This is a textual template image for the VM disk controller.
+For binary tests, replace this file with a raw 512-byte-sector image.

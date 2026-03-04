@@ -1,0 +1,14 @@
+EVM_DISK_IMAGE_V1
+label=data
+disk_id=1
+sector_size=512
+sector_count=8192
+
+[layout]
+sector_0000=metadata
+sector_0001_8191=data area
+
+[notes]
+Secondary data disk (D1).
+Use with MMIO controller at base 0xF0003040.
+This file is a textual placeholder and can be replaced by a raw image.
